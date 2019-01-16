@@ -10,7 +10,7 @@ cp -r pentaho_transformacion librocomprasv6/
 # rm -R librocomprasv6/jasperfeliz/*
 
 # sigo limpiando los archivos de trabajo nada mas
-rm -R jarperfeliz/*.*~
+rm -R jasperfeliz/*.*~
 rm -R librocomprasv6/jasperfeliz/*.*~
 cp -r jasperfeliz librocomprasv6/
 cp -r tomcatfeliz librocomprasv6/
