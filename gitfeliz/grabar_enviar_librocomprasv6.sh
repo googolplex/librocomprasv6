@@ -18,5 +18,5 @@ cp  amazon2017llave/*.sh librocomprasv6/amazon2017llave
 rm *.*~
 cd librocomprasv6
 git add -A
-git commit -a -m "agrego numero de timbrado al sistema de libros contables"
+git commit -a -m "debug de la model , librocompras.java"
 git push -u origin master
