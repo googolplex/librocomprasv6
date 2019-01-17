@@ -45,7 +45,7 @@ private String lc_periodo ;
 private String lc_numerofactura ;
 
 @Column(length=20,name="NUMEROTIMBRADO")
-private String numeroTimbrado ;
+private String lc_numeroTimbrado ;
 
 @Column(length=4,name="TIVA")
 private Long tiva ;
@@ -101,8 +101,8 @@ public String getLc_numerofactura() {
 	return lc_numerofactura;
 }
 
-public String getNumeroTimbrado() {
-	return numeroTimbrado;
+public String getLc_numeroTimbrado() {
+	return lc_numeroTimbrado;
 }
 
 public Long getTiva() {

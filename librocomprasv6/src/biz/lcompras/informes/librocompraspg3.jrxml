@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="librocompraspg3" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="librocompraspg2" language="groovy" pageWidth="975" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="935" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="1.5"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="15"/>
+	<property name="ireport.x" value="234"/>
+	<property name="ireport.y" value="0"/>
 	<property name="ireport.jasperserver.reportUnit" value="/reports/casaderoger/librocompras_1"/>
 	<property name="ireport.jasperserver.url" value="http://pecerafeliz.lcompras.biz/jasperserver/services/repository"/>
 	<property name="ireport.scriptlethandling" value="0"/>
@@ -39,6 +39,7 @@ order by tipomov, lc_fecha]]>
 	<field name="total" class="java.lang.Double"/>
 	<field name="lc_periodo" class="java.lang.String"/>
 	<field name="lc_numerofactura" class="java.lang.String"/>
+	<field name="lc_numerotimbrado" class="java.lang.String"/>
 	<field name="tiva" class="java.lang.Long"/>
 	<field name="tipomov" class="java.lang.String"/>
 	<field name="datecreated" class="java.sql.Timestamp"/>
@@ -88,7 +89,7 @@ order by tipomov, lc_fecha]]>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{tipomov}]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement key="line" positionType="FixRelativeToBottom" x="2" y="35" width="802" height="1"/>
+					<reportElement key="line" positionType="FixRelativeToBottom" x="2" y="35" width="923" height="1"/>
 					<graphicElement>
 						<pen lineWidth="0.5" lineColor="#999999"/>
 					</graphicElement>
@@ -96,50 +97,50 @@ order by tipomov, lc_fecha]]>
 			</band>
 		</groupHeader>
 		<groupFooter>
-			<band height="28">
+			<band height="29">
 				<line>
-					<reportElement key="line" positionType="FixRelativeToBottom" x="4" y="4" width="802" height="1"/>
+					<reportElement key="line" positionType="FixRelativeToBottom" x="1" y="4" width="923" height="1"/>
 					<graphicElement>
 						<pen lineWidth="0.5" lineColor="#999999"/>
 					</graphicElement>
 				</line>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="722" y="10" width="72" height="15"/>
+					<reportElement key="textField" style="Detail" x="851" y="10" width="72" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$V{ttotal}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="543" y="10" width="54" height="15"/>
+					<reportElement key="textField" style="Detail" x="672" y="10" width="54" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$V{tiva10}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="410" y="10" width="54" height="15"/>
+					<reportElement key="textField" style="Detail" x="539" y="10" width="54" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$V{texen}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="661" y="10" width="57" height="15"/>
+					<reportElement key="textField" style="Detail" x="790" y="10" width="57" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$V{tiva5}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="599" y="10" width="56" height="15"/>
+					<reportElement key="textField" style="Detail" x="728" y="10" width="56" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$V{tgrav5}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="466" y="10" width="72" height="15"/>
+					<reportElement key="textField" style="Detail" x="595" y="10" width="72" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
@@ -164,7 +165,7 @@ order by tipomov, lc_fecha]]>
 				<text><![CDATA[Libro de ventas y compras]]></text>
 			</staticText>
 			<frame>
-				<reportElement key="frame" mode="Opaque" x="0" y="49" width="802" height="24" forecolor="#B89F7D" backcolor="#F2EBDF"/>
+				<reportElement key="frame" mode="Opaque" x="0" y="49" width="935" height="24" forecolor="#B89F7D" backcolor="#F2EBDF"/>
 				<textField isBlankWhenNull="false">
 					<reportElement key="textField" style="SubTitle" x="309" y="3" width="470" height="14" forecolor="#736343"/>
 					<textElement>
@@ -205,32 +206,32 @@ order by tipomov, lc_fecha]]>
 				<text><![CDATA[CLIENTE/PROVEEDOR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" style="Column header" x="410" y="80" width="54" height="15" forecolor="#736343"/>
+				<reportElement key="staticText" style="Column header" x="539" y="80" width="54" height="15" forecolor="#736343"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[EXEN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" style="Column header" x="466" y="80" width="72" height="15" forecolor="#736343"/>
+				<reportElement key="staticText" style="Column header" x="595" y="80" width="72" height="15" forecolor="#736343"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[GRAV10]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" style="Column header" x="543" y="80" width="54" height="15" forecolor="#736343"/>
+				<reportElement key="staticText" style="Column header" x="672" y="80" width="54" height="15" forecolor="#736343"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[IVA10]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" style="Column header" x="599" y="80" width="56" height="15" forecolor="#736343"/>
+				<reportElement key="staticText" style="Column header" x="728" y="80" width="56" height="15" forecolor="#736343"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[GRAV5]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" style="Column header" x="661" y="80" width="57" height="15" forecolor="#736343"/>
+				<reportElement key="staticText" style="Column header" x="790" y="80" width="57" height="15" forecolor="#736343"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[IVA5]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" style="Column header" x="722" y="80" width="72" height="15" forecolor="#736343"/>
+				<reportElement key="staticText" style="Column header" x="851" y="80" width="72" height="15" forecolor="#736343"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[TOTAL]]></text>
 			</staticText>
@@ -239,8 +240,13 @@ order by tipomov, lc_fecha]]>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA[FACTURA]]></text>
 			</staticText>
+			<staticText>
+				<reportElement key="staticText" style="Column header" x="423" y="81" width="93" height="15" forecolor="#736343"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[TIMBRADO]]></text>
+			</staticText>
 			<line>
-				<reportElement key="line" positionType="FixRelativeToBottom" x="0" y="98" width="802" height="1"/>
+				<reportElement key="line" positionType="FixRelativeToBottom" x="0" y="98" width="923" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
@@ -258,7 +264,7 @@ order by tipomov, lc_fecha]]>
 	<detail>
 		<band height="17" splitType="Stretch">
 			<frame>
-				<reportElement key="frame" style="Row" mode="Opaque" x="0" y="0" width="802" height="15"/>
+				<reportElement key="frame" style="Row" mode="Opaque" x="0" y="0" width="923" height="15"/>
 				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="false">
 					<reportElement key="textField" style="Detail" x="67" y="0" width="52" height="15"/>
 					<textElement>
@@ -274,7 +280,7 @@ order by tipomov, lc_fecha]]>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{proveedor}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="410" y="0" width="54" height="15"/>
+					<reportElement key="textField" style="Detail" x="539" y="0" width="54" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
@@ -288,39 +294,25 @@ order by tipomov, lc_fecha]]>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$V{contadorfeliz}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="466" y="0" width="72" height="15"/>
+					<reportElement key="textField" style="Detail" x="595" y="0" width="72" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$F{grav10}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="543" y="0" width="54" height="15"/>
+					<reportElement key="textField" style="Detail" x="672" y="0" width="54" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$F{iva10}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="599" y="0" width="56" height="15"/>
+					<reportElement key="textField" style="Detail" x="728" y="0" width="56" height="15"/>
 					<textElement textAlignment="Right">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$F{grav5}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="661" y="0" width="57" height="15"/>
-					<textElement textAlignment="Right">
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression class="java.lang.Double"><![CDATA[$F{iva5}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
-					<reportElement key="textField" style="Detail" x="722" y="0" width="72" height="15"/>
-					<textElement textAlignment="Right">
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression class="java.lang.Double"><![CDATA[$F{total}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
 					<reportElement key="textField" style="Detail" x="313" y="0" width="93" height="15"/>
@@ -329,12 +321,33 @@ order by tipomov, lc_fecha]]>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{lc_numerofactura}]]></textFieldExpression>
 				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="true">
+					<reportElement key="textField" style="Detail" x="423" y="0" width="93" height="15"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{lc_numerotimbrado}]]></textFieldExpression>
+				</textField>
 				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="false">
 					<reportElement key="textField" style="Detail" x="26" y="0" width="41" height="15"/>
 					<textElement textAlignment="Center">
 						<font size="8"/>
 					</textElement>
 					<textFieldExpression class="java.lang.Double"><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
+					<reportElement key="textField" style="Detail" x="790" y="2" width="57" height="13"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{iva5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0" isBlankWhenNull="false">
+					<reportElement key="textField" style="Detail" x="851" y="0" width="72" height="13"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$F{total}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
@@ -352,7 +365,7 @@ order by tipomov, lc_fecha]]>
 	<pageFooter>
 		<band height="25" splitType="Stretch">
 			<frame>
-				<reportElement key="frame" mode="Opaque" x="-1" y="1" width="802" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
+				<reportElement key="frame" mode="Opaque" x="-1" y="1" width="936" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
 				<textField evaluationTime="Report" isBlankWhenNull="false">
 					<reportElement key="textField" style="Column header" x="737" y="1" width="40" height="20" forecolor="#736343"/>
 					<textElement verticalAlignment="Middle">
@@ -387,7 +400,7 @@ order by tipomov, lc_fecha]]>
 	<summary>
 		<band height="40" splitType="Stretch">
 			<line>
-				<reportElement key="line" positionType="FixRelativeToBottom" x="0" y="6" width="802" height="1"/>
+				<reportElement key="line" positionType="FixRelativeToBottom" x="0" y="6" width="923" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>

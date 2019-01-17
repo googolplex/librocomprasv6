@@ -19,7 +19,7 @@ public class VistaLibroComprasBean {
 	private Double total ;
 	private String lc_periodo ;
 	private String lc_numerofactura ;
-	private String numerotimbrado ;	
+	private String lc_numerotimbrado ;	
 	private Long tiva ;
 	private String tipomov ;
 	private Long cte_codigo ;
@@ -163,11 +163,11 @@ public class VistaLibroComprasBean {
 		this.lc_numerofactura = lc_numerofactura;
 	}
 	
-	public String getNumerotimbrado() {
-		return numerotimbrado;
+	public String getLc_numerotimbrado() {
+		return lc_numerotimbrado;
 	}
-	public void setNumerotimbrado(String numerotimbrado) {
-		this.numerotimbrado = numerotimbrado;
+	public void setLc_numerotimbrado(String lc_numerotimbrado) {
+		this.lc_numerotimbrado = lc_numerotimbrado;
 	}
 	public Long getTiva() {
 		return tiva;
