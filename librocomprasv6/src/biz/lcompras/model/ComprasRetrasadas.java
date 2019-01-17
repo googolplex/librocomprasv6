@@ -26,7 +26,7 @@ import biz.lcompras.calculadores.*;
         }
 )
 @Tab(properties= "yyyymm, fecha, contribuyente.cteNombre, proveedor.nombre, numeroFactura, numeroTimbrado, montoTotal, montoIva10+, montoIva5+, exento+, tipomov.descripcion, estado.descripcion", defaultOrder="${yyyymm} desc,${fecha} asc")
-@View(members="yyyymm,fecha,contribuyente;proveedor,proveedorRuc;"+"contabilidad [tipoiva,ctaCompradora;ctaPagadora]"+"Clasificacion [tipomov,formapago,deducible;estado]"+"Montos [exento,lcMontoBase10,montoBase5]"+"Calculados [totalGravada10,montoIva10;totalGravada5,montoIva5,montoTotal]"+"numeroFactura"+"numeroTimbrado")
+@View(members="yyyymm,fecha,contribuyente;proveedor,proveedorRuc;"+"contabilidad [tipoiva,ctaCompradora;ctaPagadora]"+"Clasificacion [tipomov,formapago,deducible;estado]"+"Montos [exento,lcMontoBase10,montoBase5]"+"Calculados [totalGravada10,montoIva10;totalGravada5,montoIva5,montoTotal]"+"numeroFactura,numeroTimbrado")
 public class ComprasRetrasadas extends SuperClaseFeliz  {
 
 	@Required
