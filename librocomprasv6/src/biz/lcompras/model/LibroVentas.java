@@ -364,8 +364,21 @@ public class LibroVentas extends SuperClaseFeliz  {
 			this.setLvMontoTotal(this.getLvExento()+this.getTotalGravada10()+ Math.round(this.getLvMontoIva10())+this.getTotalGravadas5()+Math.round(this.getLvMontoIva5()));			
 		}
 	}
+	private void camposnulos() {
+		// proteccion contra nulos en la pantalla
+		if (this.getLvMontoBase5() == null ) {
+			this.setLvMontoBase5(0.0D );
+		}
+		if (this.getLvMontoBase10() == null ) {
+			this.setLvMontoBase10(0.0D );
+		}
+		if (this.getLvExento() == null ) {
+			this.setLvExento(0.0D );
+		}
+	}
 	@PrePersist
 	private void antesDeGrabar() {
+		this.camposnulos();
 		this.camposCalculados();
 	}
 	

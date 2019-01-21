@@ -18,5 +18,5 @@ cp  amazon2017llave/*.sh librocomprasv6/amazon2017llave
 rm *.*~
 cd librocomprasv6
 git add -A
-git commit -a -m "debug del view de comprasretrasadas"
+git commit -a -m "proteccion contra nulos"
 git push -u origin master

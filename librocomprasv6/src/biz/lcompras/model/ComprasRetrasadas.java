@@ -381,8 +381,23 @@ public class ComprasRetrasadas extends SuperClaseFeliz  {
 			this.setMontoTotal(this.getExento()+this.getTotalGravada10()+ Math.round(this.getMontoIva10())+this.getTotalGravada5()+Math.round(this.getMontoIva5()));
 		}
 	}
+	
+	private void camposnulos() {
+		// proteccion contra nulos en la pantalla
+		if (this.getMontoBase5() == null ) {
+			this.setMontoBase5(0.0D );
+		}
+		if (this.getLcMontoBase10() == null ) {
+			this.setLcMontoBase10(0.0D );
+		}
+		if (this.getExento() == null ) {
+			this.setExento(0.0D );
+		}
+	}
+	
 	@PrePersist
 	private void antesDeGrabar() {
+		this.camposnulos();		
 		this.camposCalculados();
 	}
 	@PreUpdate
